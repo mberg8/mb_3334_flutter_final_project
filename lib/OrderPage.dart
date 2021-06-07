@@ -141,7 +141,7 @@ class CheckBoxListTileModel {
           title: "Wild Hearts Can't be Broken",
           isCheck: false),
 
-
     ];
+
   }
 }
