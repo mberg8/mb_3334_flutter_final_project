@@ -15,10 +15,9 @@ class OrderPage extends StatelessWidget {
       body: Center(
         child: Container(
 
-          // height: 200,
             child: GridView.count(
                 scrollDirection: Axis.vertical,
-                crossAxisCount: 2,
+                crossAxisCount: 1,
                 children: [
             ElevatedButton(
             child:
@@ -29,9 +28,13 @@ class OrderPage extends StatelessWidget {
               );
             }
         ),
-      ),
+        ],
+
+
+            ),
     ),
     ),
     );
-  }
+}
+}
 
