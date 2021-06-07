@@ -1,207 +1,147 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+
 
 
 class OrderPage extends StatefulWidget {
-
   @override
-  _PageState createState() => _PageState();
-
+  PageState createState() => new PageState();
 }
 
-class _PageState  extends State<OrderPage> {
-  bool v1 = false;
-  bool v2 = false;
-  bool v3 = false;
-  bool v4 = false;
-  bool v5 = false;
-  bool v6 = false;
-  bool v7 = false;
-  bool v8 = false;
-  bool v9 = false;
-  bool v10 = false;
-  bool v11 = false;
-  bool v12 = false;
+class PageState extends State<OrderPage> {
+  List<CheckBoxListTileModel> checkBoxListTileModel =
+  CheckBoxListTileModel.getUsers();
+
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.tealAccent,
-        appBar: AppBar(
-          title: Text('Classic. Vintage. Books'),
-          backgroundColor: Colors.deepPurpleAccent,
+    return new Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.deepPurpleAccent,
+        centerTitle: true,
+        title: new Text(
+          'Classic. Vintage. Books',
+          style: TextStyle(color: Colors.black),
         ),
-        body: Center(
-          child: Container(
-            child: GridView.count(
-                scrollDirection: Axis.vertical,
-                crossAxisCount: 1,
-                padding: new EdgeInsets.all(1.0),
-                children: <Widget> [
-                  SizedBox(width: 10,),
-                  Text('Order Form', style: TextStyle(fontSize: 30.0), textAlign: TextAlign.center,),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                   title: const Text(
-                  'Anne of Green Gables', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                  value: this.v1,
-                  onChanged: (bool value) {
-                  setState(() {
-                    this.v1 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text(
-                    'Black Beauty', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v4,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v4 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text('Hatchet', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v4,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v4 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text('The Lion the Witch and the Wardrobe',
-                    style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v4,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v4 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text(
-                  'Little Women', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v5,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v5 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                     title: const Text(
-                    'Mary Poppins', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v6,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v6 = value;
-                  });
-                },
-              ),
-
-                  CheckboxListTile(
-                     secondary: const Icon(Icons.book),
-                    title: const Text(
-                  'The Wizard of Oz', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v7,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v7 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text(
-                  'Peter Pan', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v8,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v8 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text(
-                  'Pippi LongStalking', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v9,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v9 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text('Where the Red Fern Grows',
-                    style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v10,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v10 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text('Where the Red Fern Grows',
-                    style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                    value: this.v10,
-                    onChanged: (bool value) {
-                    setState(() {
-                    this.v10 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                      secondary: const Icon(Icons.book),
-                    title: const Text(
-                  'The Secret Garden', style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                  value: this.v11,
-                  onChanged: (bool value) {
-                  setState(() {
-                    this.v11 = value;
-                  });
-                },
-              ),
-                  CheckboxListTile(
-                    secondary: const Icon(Icons.book),
-                    title: const Text('Wild Hearts Cant be Broken',
-                  style: TextStyle(fontSize: 28.0), textAlign: TextAlign.center),
-                  value: this.v12,
-                  onChanged: (bool value) {
-                  setState(() {
-                    this.v12 = value;
-                  });
-                },
-              ),
-            ],
-
-
-          ),
-
-
-        ),
-
-
       ),
-    ),
+      body: new ListView.builder(
+          itemCount: checkBoxListTileModel.length,
+          itemBuilder: (BuildContext context, int index) {
+            return new Card(
+              child: new Container(
+                padding: new EdgeInsets.all(10.0),
+                child: Column(
+                  children: <Widget>[
+                    new CheckboxListTile(
+                        activeColor: Colors.deepPurpleAccent,
+                        dense: true,
+                        //font change
+                        title: new Text(
+                          checkBoxListTileModel[index].title,
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 0.5),
+                        ),
+                        value: checkBoxListTileModel[index].isCheck,
+                        secondary: Container(
+                          height: 50,
+                          width: 50,
+                          child: Image.asset(
+                            checkBoxListTileModel[index].img,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        onChanged: (bool val) {
+                          itemChange(val, index);
+                        })
+                  ],
+                ),
+              ),
+            );
+          }),
     );
   }
+
+  void itemChange(bool val, int index) {
+    setState(() {
+      checkBoxListTileModel[index].isCheck = val;
+    });
+  }
 }
+class CheckBoxListTileModel {
+  int userId;
+  String img;
+  String title;
+  bool isCheck;
+
+  CheckBoxListTileModel({ this.userId, this.img, this.title, this.isCheck});
+
+  static List<CheckBoxListTileModel> getUsers() {
+    return <CheckBoxListTileModel>[
+      CheckBoxListTileModel(
+          userId:1,
+          img: 'assets/Anne.png',
+          title: "Anne of Green Gables",
+          isCheck: true),
+      CheckBoxListTileModel(
+          userId:2,
+          img: 'assets/1Bb.png',
+          title: "Black Beauty",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:3,
+          img: 'assets/Hatchet.png',
+          title: "Hatchet",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:4,
+          img: 'assets/Lion.png',
+          title: "The Lion the Witch and the Wardrobe",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:5,
+          img: 'assets/littlew.png',
+          title: "Little Women",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:6,
+          img: 'assets/maryp.png',
+          title: "Mary Poppins",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:7,
+          img: 'assets/oz.png',
+          title: "The Wizard of Oz",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:8,
+          img: 'assets/peter.png',
+          title: "Peter Pan",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:9,
+          img: 'assets/pippi.png',
+          title: "Pippi LongStalking",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:10,
+          img: 'assets/redf.png',
+          title: "Where the Red Fern Grows",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:11,
+          img: 'assets/secretg.png',
+          title: "The Secret Garden",
+          isCheck: false),
+      CheckBoxListTileModel(
+          userId:12,
+          img: 'assets/wildheart.png',
+          title: "Wild Hearts Can't be Broken",
+          isCheck: false),
 
 
-
-
-
-
-
+    ];
+  }
+}
